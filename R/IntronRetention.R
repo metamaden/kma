@@ -91,7 +91,7 @@ newIntronRetention <- function(targetExpression,
     cat("computing denominator\n")
     intronToUnion <- data.table(intronToUnion)
     targetExpression <- data.table(targetExpression)
-    denomExp <- left_join(intronToUnion, targetExpression, by = "target_id") %>%
+    denomExp <- merge(intronToUnion, targetExpression, by = "target_id") %>%
         group_by(intron) %>%
         select(-(target_id)) %>%
         summarise_each(funs(sum), -matches("gene"),
