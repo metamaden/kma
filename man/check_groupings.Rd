@@ -12,8 +12,7 @@ check_groupings(dat, valid_groups = c("intron", "condition"))
 \item{valid_groups}{a character string of groups to group_by}
 }
 \value{
-\code{dat} grouped by valid_groups. Internally groups using
-\link{\code{dplyr::group_by}}
+\code{dat} grouped by valid_groups. Internally groups using "dplyr::group_by"
 }
 \description{
 Check if data.frame is grouped. If it isn't, group and return grouped
